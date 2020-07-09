@@ -18,4 +18,19 @@ test("renders correctly with first name", () => {
   const messageInput = screen.getByTestId(/message/i)
 
 
+
+  fireEvent.change(firstNameInput, {
+    target: {value: "Bara" }
+  });
+  fireEvent.change(lastNameInput, {
+    target: {value: "Dejlova" }
+  });
+  fireEvent.change(emailInput, {
+    target: {value: "barbara@barbara.com" }
+  });
+  fireEvent.change(messageInput, {
+    target: {value: "Hi" }
+  });
+
+
 });
